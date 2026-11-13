@@ -12,9 +12,8 @@ This repo does **not** contain the game. You need your own copy.
 ## Install
 
 1. Install or copy the game from your own disc.
-2. Copy into the game folder (next to `Chaos.exe`):
-   - `game/ddraw.dll`
-   - `game/ddraw.ini`
+2. Download the zip from the [latest release](https://github.com/vigorousyd168/magic-and-mayhem-hd/releases/latest) and extract `ddraw.dll` and `ddraw.ini` into the game folder (next to `Chaos.exe`).
+   Optionally, also copy from this repo:
    - `game/CFG/prefs.cfg` (optional: sets the frame rate to 32, see below)
    - `game/Sounds/Sounds.ini` (optional: fixes a `Sound Manger Load Error` for `Picview2.wav`)
 3. Run `Chaos.exe`.
@@ -59,3 +58,7 @@ python tools/gen_patches.py chaos_listing.txt src/ddraw/patches.h
 - `src/ddraw/patches.h`: generated table of screen-size immediates
 - `tools/gen_patches.py`: generator for `patches.h`
 - `game/`: the built DLL and the edited config files
+
+## License
+
+The patch code is under the [MIT License](LICENSE). *Magic & Mayhem* and its game files belong to their respective owners and are not included.
