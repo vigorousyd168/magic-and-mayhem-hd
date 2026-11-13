@@ -1,0 +1,11 @@
+# Original game files are not part of this repo; only the patch and the edited configs.
+/game/*
+!/game/ddraw.dll
+!/game/ddraw.ini
+!/game/CFG/
+/game/CFG/*
+!/game/CFG/prefs.cfg
+!/game/Sounds/
+/game/Sounds/*
+!/game/Sounds/Sounds.ini
+*.iso
