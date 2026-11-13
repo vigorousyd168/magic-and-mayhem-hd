@@ -12,10 +12,12 @@ This repo does **not** contain the game. You need your own copy.
 ## Install
 
 1. Install or copy the game from your own disc.
-2. Download the zip from the [latest release](https://github.com/vigorousyd168/magic-and-mayhem-hd/releases/latest) and extract `ddraw.dll` and `ddraw.ini` into the game folder (next to `Chaos.exe`).
-   Optionally, also copy from this repo:
-   - `game/CFG/prefs.cfg` (optional: sets the frame rate to 32, see below)
-   - `game/Sounds/Sounds.ini` (optional: fixes a `Sound Manger Load Error` for `Picview2.wav`)
+2. Download the zip from the [latest release](https://github.com/vigorousyd168/magic-and-mayhem-hd/releases/latest) and extract it into the game folder (next to `Chaos.exe`). It contains:
+   - `ddraw.dll` and `ddraw.ini`: the patch
+   - `CFG/prefs.cfg`: sets the frame rate to 32 (see below)
+   - `Sounds/Sounds.ini`: fixes a `Sound Manger Load Error` for `Picview2.wav`
+
+   The last two replace the game's own files, so back up `CFG/prefs.cfg` first if you've changed your settings.
 3. Run `Chaos.exe`.
 
 ## Settings (`ddraw.ini`)
