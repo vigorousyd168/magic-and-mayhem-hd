@@ -11,14 +11,17 @@ This repo does **not** contain the game. You need your own copy.
 
 ## Install
 
-1. Install or copy the game from your own disc.
-2. Download the zip from the [latest release](https://github.com/vigorousyd168/magic-and-mayhem-hd/releases/latest) and extract it into the game folder (next to `Chaos.exe`). It contains:
+1. Download the zip from the [latest release](https://github.com/vigorousyd168/magic-and-mayhem-hd/releases/latest) and extract it into an empty folder where you want the game. It contains:
    - `ddraw.dll` and `ddraw.ini`: the patch
    - `CFG/prefs.cfg`: sets the frame rate to 32 (see below)
    - `Sounds/Sounds.ini`: fixes a `Sound Manger Load Error` for `Picview2.wav`
+   - `Install from ISO.bat` and `install-from-iso.ps1`: installs the game from your disc
+2. Drag your disc image (`.iso`) onto `Install from ISO.bat`, or double-click it and pick the `.iso`. You can also drag the disc drive onto it.
 
-   The last two replace the game's own files, so back up `CFG/prefs.cfg` first if you've changed your settings.
+   The disc's own `setup.exe` is a 16-bit InstallShield launcher that 64-bit Windows can't run. This script does the same job without it: it unpacks `data1.cab`, copies `REALMS` and `FMV` from the disc, and writes `CDROMDrive.cfg` so the game doesn't need the disc afterwards. It never overwrites files that are already there, so the patch's `prefs.cfg` and `Sounds.ini` stay in place.
 3. Run `Chaos.exe`.
+
+If the game is already installed, you can instead extract the zip into the game folder (next to `Chaos.exe`). `CFG/prefs.cfg` and `Sounds/Sounds.ini` then replace the game's own files, so back up `CFG/prefs.cfg` first if you've changed your settings. If the game still asks for the disc, edit `CDROMDrive.cfg` to say `CDROMDrive=.\` and copy `REALMS` and `FMV` from the disc into the game folder.
 
 ## Settings (`ddraw.ini`)
 
@@ -59,7 +62,7 @@ python tools/gen_patches.py chaos_listing.txt src/ddraw/patches.h
 - `src/ddraw/ddraw.c`: the DirectDraw wrapper and in-memory patches
 - `src/ddraw/patches.h`: generated table of screen-size immediates
 - `tools/gen_patches.py`: generator for `patches.h`
-- `game/`: the built DLL and the edited config files
+- `game/`: the built DLL, the edited config files, and the install-from-ISO script
 
 ## License
 

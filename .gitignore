@@ -2,6 +2,8 @@
 /game/*
 !/game/ddraw.dll
 !/game/ddraw.ini
+!/game/install-from-iso.ps1
+!/game/Install from ISO.bat
 !/game/CFG/
 /game/CFG/*
 !/game/CFG/prefs.cfg
