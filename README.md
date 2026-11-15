@@ -16,6 +16,8 @@ This repo does **not** contain the game. You need your own copy.
    - `CFG/prefs.cfg`: sets the frame rate to 32 (see below)
    - `Sounds/Sounds.ini`: fixes a `Sound Manger Load Error` for `Picview2.wav`
    - `Install from ISO.bat` and `install-from-iso.ps1`: installs the game from your disc
+
+   To avoid an "unknown publisher" warning, first right-click the zip → Properties → tick **Unblock** → OK, then extract.
 2. Drag your disc image (`.iso`) onto `Install from ISO.bat`, or double-click it and pick the `.iso`. You can also drag the disc drive onto it.
 
    The disc's own `setup.exe` is a 16-bit InstallShield launcher that 64-bit Windows can't run. This script does the same job without it: it unpacks `data1.cab`, copies `REALMS` and `FMV` from the disc, and writes `CDROMDrive.cfg` so the game doesn't need the disc afterwards. It never overwrites files that are already there, so the patch's `prefs.cfg` and `Sounds.ini` stay in place.
