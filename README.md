@@ -1,5 +1,7 @@
 # Magic & Mayhem HD
 
+English | [简体中文](README.zh-CN.md)
+
 A widescreen patch for *Magic & Mayhem* (魔法师传奇). It runs the original, unmodified `Chaos.exe`; a replacement `ddraw.dll` patches the game in memory at startup.
 
 - The battlefield renders at true widescreen resolution (default 1920x1080, scaled to your monitor).
