@@ -9,6 +9,7 @@
 #   - unpacks data1.cab the way the installer would lay it out
 #   - copies REALMS\ and FMV\ from the disc
 #   - writes CDROMDrive.cfg so the game reads those from its own folder
+#   - creates the empty Save folder for saved games
 # Files that already exist are left alone, so the patch's CFG\prefs.cfg and
 # Sounds\Sounds.ini (and your saves) are kept if you extracted the zip first.
 
@@ -186,6 +187,9 @@ try {
 # The game looks for REALMS\ and FMV\ on the drive named here; point it at its own folder.
 [IO.File]::WriteAllText((Join-Path $Dest 'CDROMDrive.cfg'),
     "[CDROM Drive Letter With Colon]`r`nCDROMDrive=.\`r`n")
+
+# Saved games go here; the original installer creates it empty, and saving fails without it.
+New-Item -ItemType Directory -Force (Join-Path $Dest 'Save') | Out-Null
 
 Write-Host ''
 if (Test-Path -LiteralPath (Join-Path $Dest 'ddraw.dll')) {
